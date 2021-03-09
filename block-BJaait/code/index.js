@@ -13,13 +13,13 @@ function handleSubmit(event) {
   }
 }
 
-for (const item of dragItems) {
-  console.log(item);
-  item.addEventListener("dragover", dragOver);
-  item.addEventListener("dragenter", dragEnter);
-  item.addEventListener("dragleave", dragLeave);
-  item.addEventListener("drop", dragDrop);
-}
+// for (const item of dragItems) {
+//   console.log(item);
+//   item.addEventListener("dragover", dragOver);
+//   item.addEventListener("dragenter", dragEnter);
+//   item.addEventListener("dragleave", dragLeave);
+//   item.addEventListener("drop", dragDrop);
+// }
 
 function createUI(allItems) {
   root.innerHTML = "";
@@ -77,8 +77,8 @@ function handleLeave(event) {
 function handleDragEnd(event) {
   this.style.opacity = "1";
   this.classList.remove("over");
-  list
-    .querySelectorAll("li")
-    .forEach((element) => element.classList.remove("over"));
+  dragItems.forEach((element) => element.classList.remove("over"));
   // createUi(arr);
 }
+
+input.addEventListener("keyup", handleSubmit);
