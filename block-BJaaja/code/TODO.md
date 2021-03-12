@@ -13,7 +13,7 @@ Example:
 var count = 1;
 if (true) {
   count += 1;
-}
+} // bad code
 
 let count = 1;
 if (true) {
@@ -50,9 +50,7 @@ var animalMethods = {
     return this.location;
   },
   summary: function () {
-    console.log(
-      `I live in ${this.location} and I have ${this.numberOfLegs}`
-    );
+    console.log(`I live in ${this.location} and I have ${this.numberOfLegs}`);
   },
 };
 
@@ -90,12 +88,7 @@ var dogsMethods = {
 
 Object.setPrototypeOf(dogsMethods, animalMethods);
 
-function createCat(
-  location,
-  numberOfLegs,
-  name,
-  colorOfEyes
-) {
+function createCat(location, numberOfLegs, name, colorOfEyes) {
   let obj = createAnimal(location, numberOfLegs);
   Object.setPrototypeOf(obj, catsMethods);
   obj.name = name;
@@ -125,8 +118,8 @@ Object.setPrototypeOf(catsMethods, animalMethods);
 3.
 
 ```js
-const anakinSkywalker = 'Anakin Skywalker';
-const lukeSkywalker = 'Luke Skywalker';
+const anakinSkywalker = "Anakin Skywalker";
+const lukeSkywalker = "Luke Skywalker";
 
 const obj = {
   episodeOne: 1,
